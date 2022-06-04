@@ -4,7 +4,7 @@
   
   tasks:
     - command: docker image build -t java-hello-world java-hello-world/
-    - command: docker login -u ppqq122333 -p "{{ lookup(`env`, `PASS`) }}"
+    - command: docker login -u ppqq122333 -p "{{ lookup('env', 'PASS') }}"
     - command: docker push ppqq122333/java-hello-world
     - command: docker logout
 
